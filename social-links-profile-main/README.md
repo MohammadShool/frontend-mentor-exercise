@@ -18,4 +18,4 @@ this repo is a html & css challenge from [fontendmentor.io](http://frontendmento
 </span>
 
 # preview
-<a href="https://mohammadshool.github.io/social-links-profile-main/" target="_blank">https://mohammadshool.github.io/social-links-profile-main/</a>
+<a href="https://mohammadshool.github.io/frontend-mentor-exercise/social-links-profile-main/" target="_blank">https://mohammadshool.github.io/frontend-mentor-exercise/social-links-profile-main/</a>
