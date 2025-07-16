@@ -2,9 +2,13 @@
 
 # Components
 
-- [qr code](#qr-code-component)
-
-<div id="testimonials-grid-section"></div>
+- [testimonials grid section](#testimonials-grid-section)
+- [four card feature section](#four-card-feature-section)
+- [product preview card component](#product-preview-card-component)
+- [recipe page](#recipe-page)
+- [social links profile](#social-links-profile)
+- [blog preview card](#blog-preview-card)
+- [qr code component](#qr-code-component)
 
 ## testimonials grid section
 
@@ -59,8 +63,6 @@ links:
 - [live preview](https://mohammadshool.github.io/frontend-mentor-exercise/blog-preview-card-main/)
 - [frontend mentor page](https://www.frontendmentor.io/solutions/blog-preview-card-fW1wkZZrsN)
 - [frontendmentor challenge page](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
-
-<div id="qr-code-component"></div>
 
 ## qr code component
 
