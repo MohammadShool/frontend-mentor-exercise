@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Inter;
+  src: url(./assets/fonts/Inter-VariableFont_slntwght.ttf);
+}
+
+:root {
+  font-size: 14px;
+}
+
+* {
+  font-family: Inter;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 8%);
+  margin: 0;
+}
+
+main {
+  min-height: 100vh;
+  margin: 0rem 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  flex: 1;
+  max-width: 384px;
+  background-color: hsl(0, 0%, 12%);
+  padding: 38px;
+  border-radius: 14px;
+}
+
+section .profile address {
+  color: hsl(75, 94%, 57%);
+  font-style: normal;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 7px;
+}
+
+section .profile > p {
+  margin-top: 28px;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  font-size: 1rem;
+}
+
+section .profile figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section .profile figure img {
+  width: 91.2px;
+  border-radius: 50%;
+}
+
+section .profile figcaption {
+  color: white;
+  font-weight: 600;
+  font-size: 1.71rem;
+  margin-top: 30px;
+}
+
+section > ul {
+  margin: 0;
+  margin-top: 28px;
+  list-style-type: none;
+  padding: 0;
+}
+
+section > ul li:first-child {
+  margin: 0;
+}
+
+section > ul li {
+  background-color: hsl(0, 0%, 20%);
+  text-align: center;
+  border-radius: 10px;
+}
+
+section > ul li:hover {
+  background-color: hsl(75, 94%, 57%);
+}
+
+section > ul li:hover a{
+  color: hsl(0, 0%, 12%);
+}
+
+section > ul li a {
+  color: white;
+  margin-top: 14px;
+  padding: 15px;
+  font-weight: 600;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+}
+
+.attribution {
+  background-color: black;
+  font-size: 15px;
+  text-align: center;
+  padding: 15px;
+  color: white;
+}
+.attribution a {
+  color: white;
+  font-weight: bold;
+  /* padding: 15px; */
+}
+
+@media screen and (max-width: 384px) {
+  section {
+    padding: 20px;
+  }
+}

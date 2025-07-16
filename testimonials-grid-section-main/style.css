@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --quotation: url("./images/bg-pattern-quotation.svg");
+  font-size: clamp(9px, 4vw, 11px);
+}
+
+html {
+    background-color: hsl(210, 46%, 95%);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Barlow Semi Condensed", serif;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: grid;
+    gap: 40px;
+    margin: 40px auto;
+    padding: 0px 20px;
+    max-width: 1150px;
+}
+
+article {
+  border-radius: 10px;
+  padding: 35px;
+}
+
+article > div {
+  display: flex;
+  align-items: center;
+}
+
+article > div > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 15px;
+}
+
+article > div > img {
+  width: 40px;
+  height: auto;
+  border-radius: 50%;
+  border: 2px solid hsla(0, 0%, 81%, 0.509);
+}
+
+article > div > div span {
+  font-weight: 500;
+}
+
+article > div > div span:first-child {
+  color: hsla(0, 0%, 100%, 0.871);
+}
+article > div > div span:last-child {
+  color: hsla(0, 0%, 81%, 0.711);
+}
+
+article > h1 {
+  font-weight: 600;
+  color: hsl(210, 46%, 95%);
+  font-size: 1.8rem;
+}
+
+article > p {
+  font-weight: 500;
+  color: hsla(0, 0%, 81%, 0.711);
+  font-size: 1.369rem;
+}
+
+.purple {
+  background-color: hsl(263, 55%, 52%);
+  position: relative;
+  z-index: -2;
+}
+
+.purple::after {
+  content: var(--quotation);
+  position: absolute;
+  top: 22px;
+  right: 50px;
+  transform: scale(1.4);
+  z-index: -1;
+  opacity: 0.6;
+}
+
+.gray {
+    background-color: hsl(217, 19%, 35%);
+}
+
+.black {
+    background-color: hsl(219, 29%, 14%);
+}
+
+.white {
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0px 5px 50px -10px hsl(0, 0%, 81%);
+}
+
+.white > div > div> span:first-child {
+    color: rgba(0, 0, 0, 0.597)!important;
+}
+
+.white > div > div> span:last-child {
+    color: rgba(0, 0, 0, 0.399)!important;
+}
+
+.white > h1 {
+    color: rgba(0, 0, 0, 0.597);
+}
+
+.white > p {
+    color: rgba(0, 0, 0, 0.399);
+}
+
+.attribution {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 1.4rem;
+    color: white;
+    text-align: center;
+    margin-top: auto;
+}
+
+.attribution a {
+    color: burlywood;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1024px) {
+    /* :root{
+        font-size: 13px;
+    } */
+    
+    .container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    .daniel {
+        grid-column: 1/3;
+        grid-row: 1/2;
+    }
+
+    .jonathan {
+        grid-column: 3/4;
+        grid-row: 1/2;
+    }
+
+    .jeanette {
+        grid-column: 1/2;
+        grid-row: 2/3;
+    }
+    
+    .patrick {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+
+    .kira {
+        grid-column: 4/5;
+        grid-row: 1/3;
+    }
+
+    article {
+        padding: 20px
+    }
+}

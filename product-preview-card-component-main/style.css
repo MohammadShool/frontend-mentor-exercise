@@ -1,0 +1,170 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Outfit:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", serif;
+  margin: 0px;
+  color: hsl(228, 12%, 48%);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif !important;
+  color: hsl(212, 21%, 14%);
+  font-weight: 700;
+  line-height: 30px;
+}
+
+h1 {
+  font-size: 1.73em;
+}
+
+html {
+  background-color: hsl(30, 38%, 92%);
+}
+
+body {
+  font-size: 14px;
+  overflow-x: hidden;
+  width: 100vw;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+article {
+  max-width: 600px;
+  background-color: hsl(0, 0%, 100%);
+  margin: 38px 22px;
+  border-radius: 10px;
+}
+
+article .mobile-img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 0;
+}
+
+article .desktop-img {
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  width: 100%;
+  display: none;
+}
+
+article .content {
+  margin: 10px 35px;
+}
+
+article .content .category {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+article .content .category span {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-weight: 500;
+  transform: scaleY(0.9);
+}
+
+article .content p {
+  margin: 10px 0px;
+  font-weight: 500;
+}
+
+article .content .price {
+  font-family: "Fraunces";
+  color: hsl(158, 36%, 37%);
+  font-weight: 700;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+article .content .price del {
+  font-family: "Fraunces";
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: white;
+  text-decoration: none;
+  background-color: hsl(158, 36%, 37%);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.btn:hover {
+  background-color: hsl(158, 38%, 28%);
+}
+
+.btn img {
+  width: 15px;
+}
+
+.attribution {
+  padding: 10px 0px;
+  font-size: 11px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+.attribution a {
+  font-weight: bold;
+  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  article {
+    display: flex;
+  }
+
+  article > div {
+    flex: 1;
+  }
+
+  article .content {
+    width: calc(100% - 70px);
+    height: calc(100% - 70px);
+    margin: 35px;
+    display: flex;
+    flex-direction: column;
+  }
+  article .content > p {
+    flex: 1;
+  }
+
+  article .mobile-img {
+    display: none;
+  }
+
+  article .desktop-img {
+    display: block;
+  }
+}

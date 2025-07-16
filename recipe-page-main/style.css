@@ -1,0 +1,273 @@
+@font-face {
+  font-family: outfit;
+  src: url(./assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: youngserif;
+  src: url(./assets/fonts/young-serif/YoungSerif-Regular.ttf);
+}
+
+:root {
+  font-size: 16px;
+}
+
+* {
+  font-family: outfit;
+  color: hsl(30, 10%, 34%);
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: youngserif !important;
+  font-weight: 400;
+  color: hsl(30, 10%, 34%);
+}
+
+body {
+  background-color: hsl(30, 54%, 90%);
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+main article {
+  max-width: 735px;
+  margin: 125px 0px;
+  padding: 40px;
+  /* background-color: red; */
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+}
+
+main article header img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+main article header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  margin-top: 28px;
+  word-spacing: -2px;
+  letter-spacing: 0.3px;
+  color: hsl(24, 5%, 18%);
+  color: brown;
+}
+
+main article header p {
+  line-height: 23px;
+  color: hsl(30, 10%, 34%);
+}
+
+.times {
+  padding: 27px;
+  margin: 30px 0px;
+}
+
+.times h3 {
+  margin: 0;
+  /* margin-top: 20px; */
+  font-size: 1.25rem;
+  font-family: outfit !important;
+  font-weight: 600;
+  color: hsl(332, 51%, 32%);
+}
+
+/*
+.times ul {
+  margin: 0;
+  margin-top: 15px;
+  padding: 0px;
+  padding-left: 8.5px;
+  list-style: none;
+}
+
+.times ul li:first-child {
+  margin: 0;
+}
+
+.times ul li {
+  margin-top: 13px;
+  display: flex;
+  align-items: center;
+}
+
+.times ul li p {
+  margin: 0;
+  margin-left: 27.5px;
+}
+
+.times ul li::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: hsl(332, 51%, 32%);
+} */
+
+ul {
+  margin: 0;
+  margin-top: 15px;
+  padding: 0px;
+  padding-left: 8.5px;
+  list-style: none;
+}
+
+ul li:first-child {
+  margin: 0;
+}
+
+ul li {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+}
+
+ul li p {
+  margin: 0;
+  margin-left: 27.5px;
+}
+
+ul li::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: hsl(332, 51%, 32%);
+}
+
+ol {
+  margin: 0px;
+  padding: 0px;
+  padding-left: 24px;
+  margin-top: 19px;
+}
+
+ol li {
+  margin: 0px;
+  margin-top: 9.5px;
+}
+
+ol li::marker {
+  font-family: "outfit", serif;
+  font-weight: 700;
+}
+
+ol li p {
+  margin: 0px;
+  margin-left: 16px;
+  line-height: 23px;
+}
+
+section ul {
+  margin-top: 20px;
+}
+
+main article section {
+  padding-bottom: 33px;
+  border-bottom: solid 2px hsl(30, 18%, 87%);
+  margin-bottom: 27px;
+}
+
+main article section:last-child {
+  border-bottom: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+main article section h2 {
+  color: hsl(14, 45%, 36%);
+  margin: 0px;
+  font-size: 1.74rem;
+}
+
+main article section table {
+  margin-top: 18px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+main article section table caption {
+  text-align: left;
+  margin-bottom: 18px;
+}
+
+main article section table tr:first-child {
+  margin: 0px;
+}
+
+main article section table tr {
+  margin-top: 6px;
+  display: flex;
+  border-bottom: 2px solid hsl(30, 18%, 87%);
+}
+
+main article section table td {
+  width: 55%;
+  padding: 10px 0px;
+  padding-left: 40px;
+}
+
+main article section table td:first-child {
+  width: 45%;
+  padding-left: 32px;
+}
+
+main article section table td:nth-child(even) {
+  font-weight: bold;
+  color: hsl(14, 45%, 36%);
+}
+
+main article section table tr:last-child {
+  border-bottom: none;
+}
+
+main article section ul li,
+main article section ol li {
+  color: hsl(14, 45%, 36%);
+}
+
+.attribution {
+  background-color: black;
+  padding: 15px;
+  font-size: 15px;
+  color: white;
+  text-align: center;
+}
+.attribution a {
+  color: white;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  main article {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 0px;
+  }
+
+  main article header img {
+    border-radius: 0px;
+  }
+}
