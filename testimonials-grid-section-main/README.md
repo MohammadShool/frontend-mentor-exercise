@@ -11,3 +11,4 @@ this repo is a html & css challenge from [fontendmentor.io](http://frontendmento
 
 # preview
 <a href="https://mohammadshool.github.io/testimonials-grid-section-main/" target="_blank">https://mohammadshool.github.io/testimonials-grid-section-main/</a>
+https://mohammadshool.github.io/testimonials-grid-section-main/
