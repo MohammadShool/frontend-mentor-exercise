@@ -18,4 +18,4 @@ this repo is a html & css challenge from [fontendmentor.io](http://frontendmento
 </span>
 
 # preview
-<a href="https://mohammadshool.github.io/qr-code-component-main/" target="_blank">https://mohammadshool.github.io/qr-code-component-main/</a>
+<a href="https://mohammadshool.github.io/frontend-mentor-exercise/qr-code-component-main/" target="_blank">https://mohammadshool.github.io/frontend-mentor-exercise/qr-code-component-main/</a>
