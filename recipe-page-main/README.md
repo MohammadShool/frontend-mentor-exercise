@@ -18,4 +18,4 @@ this repo is a html & css challenge from [fontendmentor.io](http://frontendmento
 </span>
 
 # preview
-<a href="https://mohammadshool.github.io/recipe-page-main/" target="_blank">https://mohammadshool.github.io/recipe-page-main/</a>
+<a href="https://mohammadshool.github.io/frontend-mentor-exercise/recipe-page-main/" target="_blank">https://mohammadshool.github.io/frontend-mentor-exercise/recipe-page-main/</a>
