@@ -18,4 +18,5 @@ this repo is a html & css challenge from [fontendmentor.io](http://frontendmento
 </span>
 
 # preview
-<a href="https://mohammadshool.github.io/blog-preview-card-main/" target="_blank">https://mohammadshool.github.io/blog-preview-card-main/</a>
+
+<a href="https://mohammadshool.github.io/frontend-mentor-exercise/blog-preview-card-main/" target="_blank">https://mohammadshool.github.io/frontend-mentor-exercise/blog-preview-card-main/</a>
