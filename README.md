@@ -1,4 +1,6 @@
 > note: i push my [frontend mentor](https://www.frontendmentor.io/profile/MohammadShool) exercises to this repository
+> 
+> you can follow me in [frontend mentor profile](https://www.frontendmentor.io/profile/MohammadShool)
 
 # Components
 
