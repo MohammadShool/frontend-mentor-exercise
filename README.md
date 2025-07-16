@@ -12,6 +12,8 @@
 
 ## testimonials grid section
 
+![testimonials grid section](./testimonials-grid-section-main/screenshots/desktop.png)
+
 links:
 
 - [github tree](https://github.com/MohammadShool/frontend-mentor-exercise/tree/master/testimonials-grid-section-main)
@@ -20,6 +22,8 @@ links:
 - [frontendmentor challenge page](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7)
 
 ## four card feature section
+
+![four card feature section master](./four-card-feature-section-master/screenshots/desktop.png)
 
 links:
 
@@ -30,6 +34,8 @@ links:
 
 ## product preview card component
 
+![product preview card component main](./product-preview-card-component-main/screenshots/desktop.png)
+
 links:
 
 - [github tree](https://github.com/MohammadShool/frontend-mentor-exercise/tree/master/product-preview-card-component-main)
@@ -38,6 +44,8 @@ links:
 - [frontendmentor challenge page](https://www.frontendmentor.io/challenges/product-preview-card-component-GO7UmttRfa)
 
 ## recipe page
+
+![recipe page main](./recipe-page-main/screenshots/desktop.png)
 
 links:
 
@@ -48,6 +56,8 @@ links:
 
 ## social links profile
 
+![social links profile main](./social-links-profile-main/screenshots/desktop.png)
+
 links:
 
 - [github tree](https://github.com/MohammadShool/frontend-mentor-exercise/tree/master/social-links-profile-main)
@@ -57,6 +67,8 @@ links:
 
 ## blog preview card
 
+![blog preview card main](./blog-preview-card-main/screenshots/desktop.png)
+
 links:
 
 - [github tree](https://github.com/MohammadShool/frontend-mentor-exercise/tree/master/blog-preview-card-main)
@@ -65,6 +77,8 @@ links:
 - [frontendmentor challenge page](https://www.frontendmentor.io/challenges/blog-preview-card-ckPaj01IcS)
 
 ## qr code component
+
+![qr code component main](./qr-code-component-main/screenshots/desktop.png)
 
 links:
 
