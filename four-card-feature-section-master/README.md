@@ -18,4 +18,4 @@ this repo is a html & css challenge from [fontendmentor.io](http://frontendmento
 </span>
 
 # preview
-<a href="https://mohammadshool.github.io/four-card-feature-section-master/" target="_blank">https://mohammadshool.github.io/four-card-feature-section-master/</a>
+<a href="https://mohammadshool.github.io/frontend-mentor-exercise/four-card-feature-section-master/" target="_blank">https://mohammadshool.github.io/frontend-mentor-exercise/four-card-feature-section-master/</a>
