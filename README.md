@@ -97,3 +97,5 @@ links:
 
 - [github tree](https://github.com/MohammadShool/frontend-mentor-exercise/tree/master/article-preview-component-master)
 - [live preview](https://mohammadshool.github.io/frontend-mentor-exercise/article-preview-component-master/)
+- [frontend mentor page](https://www.frontendmentor.io/solutions/article-preview-component-master-ij837wDt9V)
+- [frontendmentor challenge page](https://www.frontendmentor.io/challenges/article-preview-component-dYBN_pYFT)
