@@ -11,6 +11,7 @@
 - [social links profile](#social-links-profile)
 - [blog preview card](#blog-preview-card)
 - [qr code component](#qr-code-component)
+- [article preview component master](#article-preview-component-master)
 
 ## testimonials grid section
 
@@ -88,3 +89,11 @@ links:
 - [live preview](https://mohammadshool.github.io/frontend-mentor-exercise/qr-code-component-main/)
 - [frontend mentor page](https://www.frontendmentor.io/solutions/qr-code-component-sjESmwmszl)
 - [frontendmentor challenge page](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
+
+## article preview component master
+
+
+links:
+
+- [github tree](https://github.com/MohammadShool/frontend-mentor-exercise/tree/master/article-preview-component-master)
+- [live preview](https://mohammadshool.github.io/frontend-mentor-exercise/article-preview-component-master/)
