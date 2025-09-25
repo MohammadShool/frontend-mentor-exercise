@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video and audio</title>
+</head>
+<body>
+    <!-- we know that who we have very type of file formats for video and audio so our browser
+     its possible to support them or not so pay attention to this notice -->
+
+     <video src="path to your video" controls>
+        <p>you can create a video fallback in here its mean if we can not show video 
+            we show this part of document
+        </p>
+     </video>
+     <!-- why we use controls boolean attribute on video ? beacuse of video element byself dont have any
+      controller ui so you have to create your own or use browser controller so we use browser controller
+      but youtube make a controller for itself -->
+      <video controls>
+        <source src="source to another type of video"/>
+        <source src="source to another type of video"/>
+        <p>fall back</p>
+      </video>
+      <!-- so you can seprate source path from video tag to support a multiple video formats -->
+       <!-- video have a multiple feature like loop or autoplay on start and ... -->
+        <video
+            controls
+            autoplay
+            muted
+            preload="auto"
+            poster="link to your thumbnail"
+            width="200"
+            height="200"
+        >
+            <p>fallback</p>
+        </video>
+        <!-- preload have a auto, metadata, none: it mean to preload just metadata and then stream video or 
+         preload video or dont preload anything -->
+
+        <!-- we can have a video caption or subtitle for our video -->
+         <!-- we have subtitle i think this mean a translation to a language -->
+         <!-- we have captions this mean just write what are going on the video -->
+         <!-- time description add some detail to some times -->
+        <video controls>
+            <source src=""/>
+            <source src=""/>
+            <track src="source to subtitle" kind="subtitles" srclang="es" label="spanish"/>
+            <p>fallbacks</p>
+        </video>
+         <audio controls src="source to your audio">
+            <p>fallbacks</p>
+         </audio>
+
+         <audio controls>
+            <source src="" />
+            <source src="" />
+            <p>fallback</p>
+         </audio>
+
+         <audio
+         preload="auto"
+         autoplay
+            muted
+         >
+            <source src=""/>
+            <source src=""/>
+            <p>fallback</p>
+         </audio>
+</body>
+</html>

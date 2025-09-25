@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html tables</title>
+
+    <style>
+        th {
+            background-color: rgba(0, 0, 0, 0.384);
+            padding: 0;
+            border: 2px solid gray;
+        }
+
+        td {
+            padding: 0;
+            background-color: rgba(0, 0, 0, 0.151);
+            border: 2px solid gray;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th scope="2">names</th>
+            <td>mohammad</td>
+            <td>ali</td>
+            <th scope="1">special name</th>
+            <td>gholi</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">
+                animals
+            </th>
+        </tr>
+        <tr>
+            <th colspan="2">hipo</th>
+        </tr>
+        <tr>
+            <th rowspan="2">Horse</th>
+            <td>mare</td>
+        </tr>
+        <tr>
+            <td>stallion</td>
+        </tr>
+        <tr>
+            <th colspan="2">crocodile</th>
+        </tr>
+        <tr>
+            <th rowspan="2">chicken</th>
+            <td>hen</td>
+        </tr>
+        <tr>
+            <td>rooster</td>
+        </tr>
+    </table>
+
+    <table>
+        <!-- we have to tell our user (blind people or normal people) who what is table about? -->
+        <!-- we can do that with caption -->
+        <caption>table description</caption>
+        <thead></thead><!-- contain body headers -->
+        <tbody></tbody><!-- contain body data -->
+        <tfoot></tfoot><!-- usually contain a sum of data row -->
+    </table>
+
+    <!-- as like you seen that before we have a scope attribute on th who can be a number or can be a col or
+     row or a colgroup or a rowgroup and we have colspan and rowspan on th to get more place on a table -->
+
+     <table>
+        <tr>
+            <th id="names" scope="colgroup" colspan="2">names</th>
+        </tr>
+        <tr>
+            <th headers="names" id="firstname" scope="2">firstname</th>
+            <th headers="names" id="lastname" scope="2">lastname</th>
+        </tr>
+        <tr>
+            <td headers="names firstname">mohammad</td>
+            <td headers="names lastname">shool</td>
+        </tr>
+        <tr>
+            <td headers="names firstname">ali</td>
+            <td headers="names lastname">darya</td>
+        </tr>
+        <tr>
+            <th id="age" scope="row">age</th>
+            <td headers="age">24</td>
+        </tr>
+     </table>
+</body>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>html forms</title>
+    <script defer>
+        let btn = document.querySelector("button")
+        btn.addEventListener("click", () => {
+            let defaultTextContent = btn.textContent
+
+            btn.textContent = "you pressed me :-)"
+
+            setTimeout(() => {
+                btn.textContent = defaultTextContent
+            }, 2000);
+        })
+    </script>
+</head>
+
+<body>
+
+    <!-- you can create a button with button element or with input -->
+    <button id="first-button" onclick="">press me</button>
+
+    <form action="./submit_page" method="get">
+        <h2>Subscribe to our newsletter</h2>
+        <p>
+            <label for="name">Name (required):</label>
+            <input type="text" name="name" id="name" required placeholder="name ..." />
+        </p>
+        <p>
+            <label for="email">Email (required):</label>
+            <input type="email" name="email" id="email" required />
+        </p>
+        <p>
+            <button>Sign me up!</button>
+        </p>
+    </form>
+
+    <!-- <fieldset></fieldset> -->
+
+    <form>
+        <fieldset>
+            <legend>Choose hotel type:</legend>
+            <div>
+                <input type="radio" id="hotelChoicel" name="hotel" value="economy" checked/>
+                <label for="hotelChoicel">Economy</label>
+            
+                <input type="radio" id="hotelChoicel2" name="hotel" value="superior"/>
+                <label for="hotelChoicel2">superior</label>
+
+                <input disabled type="radio" id="hotelChoicel3" name="hotel" value="penthous"/>
+                <label for="hotelChoicel3">penthous</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>choise classes to attend:</legend>
+            <div>
+                <input type="checkbox" id="coffee" name="coffee" />
+                <label for="coffee">Coffee roasting</label>
+            </div>
+        </fieldset>
+        <p>
+            <label for="transport">--please choose an option--</label>
+            <select name="transport" id="transport">
+                <option value="plabe" selected>Plane</option>
+                <option value="bike">Bike</option>
+            </select>
+        </p>
+        <p>
+            <label for="comments">any other comments:</label>
+            <textarea name="comments" cols="53"
+            rows="5" id="comments"></textarea>
+        </p>
+        <p>
+            <button>continue to payment</button>
+        </p>
+    </form>
+    <!-- why we use fieldset ? for example we can disable all os a radio set -->
+</body>
+
+</html>

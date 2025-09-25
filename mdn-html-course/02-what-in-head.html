@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- we can put meta data in our html head like this -->
+    <!-- this mean use utf 8 to parsing our text on page -->
+    <meta charset="UTF-8">
+    <!-- this mean dont shrink html document to fill browser viewer and
+     keep browser viewport just like device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- meta tag help us to determine some metadata to identifying our document
+     to diffrent programs like facebook, telegram and more -->
+    <!-- most meta tags have a name and content attribute  -->
+    <meta name="author" content="mohammad shool" />
+    <meta name="description" content="description 1" />
+
+    <!-- beacuse of meta datas just meaning for programs who read our document
+     it posibble to have lot of them so you can use some protocol like facebook metadata
+     to have a standard metadata elements -->
+
+    <!-- we can determine a title for our document to show in browser tab or 
+     in bookmarks or have a meaning for screen readers or search engine crawler -->
+    <title>Document</title>
+
+    <!-- we use links to make relation between another files and our document
+     so when we use a link who is a void element browser try to get this file from
+     local or net and try to make a relation for example in this case we use this
+     element to make a stylesheet relation and browser try to get file and parse it as
+     a css -->
+    <link rel="stylesheet" href="" />
+
+    <!-- we can use this element to show faicon either -->
+    <link rel="icon" type="image/x-icon" href="faicon-example.ico" />
+
+    <!-- note: link is not just for browser you can make a link for another
+     device like a apple to determine a icon for apple when install your document
+     like this: -->
+     <link rel="apple-touch-icon" href="" />
+
+     <!-- note: for linking a script to our html we have to use script element
+      and src attribute to script path and defer boolean attribute to say browser
+      first make our dom and then run my script to prevent from unexcepted error -->
+     <script src="" defer></script>
+
+     <!-- why script is not a void element like a link element? beacuse of we can
+      write our script directly in html with script element either like this: -->
+     <script>
+        console.log("hello world!")
+     </script>
+
+     <!-- note: for writing cascading style sheet direct in html you can use attribute
+      on html elements or use a element (style) to write css syntax in html like this: -->
+      <style>
+        .something {
+            color: green;
+        }
+      </style>
+</head>
+<body>
+    <!-- css as attribute: -->
+     <p style="color: red;">hello world!</p>
+</body>
+</html>

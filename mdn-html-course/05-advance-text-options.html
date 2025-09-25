@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>advance text options</title>
+</head>
+
+<body>
+    <p>here is a blockquote</p>
+    <!-- this is a block quote -->
+    <blockquote cite="path to blockquote site">
+        <p> you can make your blockquote here </p>
+    </blockquote>
+    <!-- you can have a inline quote like this -->
+    <p>
+        hello this is my paragraph
+        <q cite="https://google.com"> you can search in me bill gay :-) just for fun please dont execute me :-( </q>
+    </p>
+
+    <!-- this is good but how screenreader can know this blockquote from where or our user can know that? -->
+    <!-- you have to use cite element like this -->
+    <a href="to quote site element"> <cite>this quote is from google</cite> </a>
+    <blockquote cite="to quote site element">
+        <p>this is a quote text</p>
+    </blockquote>
+
+    <!-- we can use abbr element to determine a content is a acronym مخففه -->
+    <p><abbr>html</abbr>, hypertext markup language</p>
+    <!-- this is a good practive to put a full version of abbreviation front of it but if 
+     you want to write acronym to make your text smaller you can use full version as a title attribute -->
+    <p>we write this content in <abbr title="hypertext markup language">html</abbr></p>
+
+    <!-- for giving contact infromation to the user you can use address element to wrap you address
+      elements with -->
+    <!-- note: just use address to give some information who related to the main content -->
+    <!-- for example its better to have a address in site footer to show site contact informations
+      and have a address in any article to put author contact informations -->
+    <address>
+        <p>you can find me in telegram @mohammadsh56</p>
+    </address>
+
+    <!-- or have a complex contact information including having lists and another things -->
+
+    <pre><code>
+function DoSomething {
+    const name = "mohammad"
+    console.log(name)
+}
+      </code></pre>
+
+    <!-- why we use a combination of pre and code elements to show a code block? -->
+    <!-- beacuse of we know that html ignore whitespaces and just keep one of them
+         so we can not have a tab in our code so use pre to solve it and use code to tell
+         agent clients this is a block of code please dont think its a normal paragraph  -->
+    <p> <var>name</var> is a varible in our code </p>
+    <p>we can get a input from keyboard like <kbd>A</kbd></p>
+    <p>and this code resualt is <samp>mohammad</samp></p>
+    <!-- so we can use var to say the agent or using for styling who this is a variable name
+          and kbd mean its a keyboard input and samp mean this is a resualt -->
+
+
+          <!-- we have diffrent ways to show times in html -->
+           <time datetime="2016-01-20">20 january 2016</time>
+           <time datetime="2016-01">january 2016</time>
+           <time datetime="01-20">20 january</time>
+           <time datetime="19:30">19:30</time>
+           <time datetime="19:30:01.856">19:30:01.85</time>
+           <time datetime="2016-01-20T19:30">7.30pm, 20 january 2016</time>
+           <time datetime="2016-w04">fourth week of 2016</time>
+</body>
+
+</html>
