@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- we have a viewport meta tag this say to mobile browsers
+     who this site is responsive and dont run it in 980px document
+     instead use of device width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <style>
+        .make-inline-block {
+            display: inline-block;
+        }
+    </style>
+
+    <!-- we call this normal flow -->
+    <h1>i am a block element</h1>
+    <p>i am a block element but <a href="#">i am inline element</a></p>
+    <p class="make-inline-block">this is normal flow of document but you can change it with css for example make this
+        paragraph a inline-block element who act like a inline element with vertical affects</p>
+    <p class="make-inline-block"> i am another inline block paragraph</p>
+    <p class="make-inline-block"> i am another inline block paragraph</p>
+
+    <style>
+        /* we can escape from natrual flow with some technique just like this*/
+        /* floats: floats is a solution for floating images in a text just like a newspaper
+        but in the past developers use this feature to layout pages and its make some problem and in 
+        this days we have beter solution for lay outing our document like flex box and grid system
+        so today we just use float to floating a image on a text */
+        /* in here we dont have any image so we use a div with absolute width and height */
+        .float-container {
+            margin-top: 30px;
+            background-color: green;
+            /* so we can see we have this container in back of float item */
+            padding: 20px;
+        }
+
+        .float-item {
+            width: 100px;
+            height: 200px;
+            background-color: red;
+            /* float item can push text content to the right but paragraph can not do same with paragraph why? beacuse of float item isnt in natural flow of document */
+            margin-right: 10px;
+            float: inline-start;
+        }
+
+        .cleared {
+            clear: left;
+        }
+
+        .display-flow-root {
+            display: flow-root;
+        }
+    </style>
+
+    <div class="float-container">
+        <div class="float-item"></div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam aspernatur error doloremque fugiat unde?
+        Dolorem ullam illum labore possimus nulla. Qui laudantium, voluptatum sed neque voluptatem minima voluptates
+        eveniet.
+    </div>
+    <p class="cleared">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet dicta mollitia deserunt nemo, at
+        excepturi maiores architecto ducimus suscipit earum quia esse laudantium, blanditiis nesciunt. Sed similique
+        quod obcaecati labore?</p>
+
+    <div class="float-container display-flow-root">
+        <div class="float-item"></div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat magnam aspernatur error doloremque fugiat unde?
+        Dolorem ullam illum labore possimus nulla. Qui laudantium, voluptatum sed neque voluptatem minima voluptates
+        eveniet.
+    </div>
+
+    <style>
+        .pos-container {
+            position: relative;
+        }
+
+        .pos-container div {
+            min-height: 100px;
+            display: flex;
+            background-color: blue;
+            border: 5px solid black;
+            margin-top: 10px;
+        }
+
+        .pos2 {
+
+            /* this is default position in normal flow */
+            /* position: static; */
+            /* this first take a position with normal flow then you can change it with top right left prop */
+            position: relative;
+            /* left: 30px; */
+            top: 30px;
+            background-color: red !important;
+            /* so when we have two box who overlaped we use this prop to show them under each other */
+            z-index: 2;
+        }
+
+        .pos1 {
+            /* this remove the element from normal flow and put it in seprate layer */
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            z-index: 3;
+            /* absolute calculate top and right and left and bottom values from it container */
+        }
+
+        .fixed {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: gray;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sticky {
+            position: sticky;
+            top: 0;
+            bottom: 0;
+            min-height: 100px;
+            background-color: brown;
+        }
+    </style>
+
+    <div class="pos-container">
+        <div class="pos1">1</div>
+        <div class="pos2">2</div>
+        <div class="pos3">3</div>
+    </div>
+    <div class="fixed">
+        <a href="#">^</a>
+    </div>
+    <div class="sticky">this is a sticky content</div>
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+    <br><br />
+
+    <style>
+        /* flexbox */
+        .flex-container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            /* flex-flow: row wrap; */
+        }
+
+        .flex-container>div {
+            flex-grow: 1;
+            flex-shrink: 300px;
+            flex-basis: 300px;
+        }
+
+        .item-1 {
+            background-color: red;
+        }
+
+        .item-2 {
+            background-color: blue;
+        }
+
+        .item-3 {
+            background-color: brown;
+        }
+
+        /* you can change justify and align items
+        or you can change order of each flex items
+        a good ability who we can not do that before of
+        flexbox */
+    </style>
+    <div class="flex-container">
+        <div class="item-1">a</div>
+        <div class="item-2">b</div>
+        <div class="item-3">c</div>
+    </div>
+
+    <style>
+        /* we can create grid template just like this */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 5px;
+            /* this isnt good beacuse of when we have a content more than avaliable space we need a flexible unit */
+            /* grid-auto-rows: 100px; */
+            grid-auto-rows: minmax(100px, auto);
+        }
+
+        .grid-container>div {
+            border: 5px solid gray;
+        }
+    </style>
+    <div class="grid-container">
+        <div class="grid-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum pariatur id hic,
+            libero itaque nam! Tempora numquam optio pariatur. Sit possimus reprehenderit nostrum aperiam vitae
+            temporibus dolorum quo ut quas.</div>
+        <div class="grid-item-2">b</div>
+        <div class="grid-item-3">c</div>
+        <div class="grid-item-4">d</div>
+    </div>
+
+    <style>
+        .layout-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-areas:
+                "h h h h h h"
+                "a a m m m m"
+                "f f f f f f";
+        }
+
+        .header {
+            grid-area: h;
+            /* grid-column-start: 1;
+            grid-column-end: -1; */
+            background-color: red;
+            color: white;
+        }
+
+        .aside {
+            grid-area: a;
+            /* grid-row: 2 / span 1;
+            grid-column: 1 / span 2; */
+            background-color: aquamarine;
+        }
+
+        .main {
+            grid-area: m;
+            /* grid-column: 3 / span 4; */
+            background-color: brown;
+        }
+
+        .footer {
+            grid-area: f;
+            /* grid-column: 1 / -1; */
+            background-color: black;
+            color: white;
+        }
+
+        /* you can use subgrid on grid-template to use from parent grid template */
+        .subgrid {
+            display: grid;
+            grid-template-columns: subgrid;
+        }
+    </style>
+
+    <div class="layout-container">
+        <div class="header">header</div>
+        <div class="main">main</div>
+        <div class="aside">aside</div>
+        <div class="footer">footer</div>
+    </div>
+
+    <style>
+        /* about break points its good for us to use of media querys and this help us to 
+        make sure who our document look good at any device
+        for example flex box and grid template are two approch who 
+        basicaly they are responsive but we add some break point beacuse of 
+        we want to change a little things to our site look good */
+        /* for example for createing a media query use of em or rem 
+        unit to make sure if user have a bigger font size then in a wider screen break to the our points */
+        @media screen and (width >=60rem) {}
+
+        /* for making a image responsive its a good practice
+        to put our image in a container and set it max-width to
+        the 100 percent of container */
+        /* but another approch for resposive image is to make sure
+        use of small pictures with picture and img tags */
+
+        /* you can use media querys for typo graphy or for 
+        fluid type graphy you can use vw unit for it like this */
+        .something {
+            /* font-size: 5vw; */
+            /* we use this beacuse of the user if we use just vw unit user lose zoom ability */
+            font-size: calc(1.5rem + 1vw);
+        }
+    </style>
+    <p class="something">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident cumque vero magni consectetur tenetur dolor
+        maiores esse. Consequuntur accusantium fugit aliquam alias porro inventore sapiente, esse velit voluptas! Nemo,
+        debitis.
+    </p>
+
+
+    <style>
+        /* for creating a media query just do like this */
+        @media screen and (width: 600px) {}
+
+        @media all and (max-width: 600px) {}
+
+        @media print {}
+
+        @media (orientation: landscape) {}
+
+        @media screen and (hover: hover) {}
+
+        @media (min-width: 300px) and (max-width: 600px) {}
+
+        @media (30em <=width < 60em) {}
+
+        /* for or logic use comma */
+
+        @media screen and (min-width: 300px),
+        screen and (min-width: 700px) {}
+
+        @media (not (max-width: 300px)) {}
+    </style>
+</body>
+
+</html>

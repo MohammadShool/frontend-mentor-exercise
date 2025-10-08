@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <style>
+        .change-font-color {
+            color: red;
+        }
+
+        .change-font-family {
+            font-family: tahoma, serif;
+        }
+
+        /* we have safe fonts for web
+        who we can use of them and make
+        sure who every user have them */
+        /* also we have font stack beacuse
+        browser choice from them */
+
+        /* you have to surround a font
+        who isnt from css font keywords
+        with double quote
+        and you can not to do this with
+        font keywords like serif or sans
+        serif fonts */
+
+        .change-font-size {
+            font-size: 1.3em;
+            /* 16px * 1.3*/
+        }
+
+        .font-style {
+            /* this could be a normal
+            or italic or could be a oblique
+            oblique is a simiulated one */
+            font-style: italic;
+        }
+
+        .font-weight {
+            font-weight: bold;
+        }
+
+        .transform-uppercase {
+            /* so you can transform a text to a custom style like this */
+            text-transform: uppercase;
+        }
+
+        .decor1 {
+            text-decoration: underline;
+        }
+
+        .decor2 {
+            text-decoration: line-through red wavy;
+            text-decoration-color: red;
+            text-decoration-thickness: 2px;
+        }
+
+        .text-shadow {
+            font-family: tahoma, sans-serif;
+            text-transform: capitalize;
+            text-shadow: 3px 3px 0px gray,
+                5px 5px 0px purple;
+        }
+    </style>
+
+    <h1 class="change-font-color">hello world!</h1>
+
+    <p class="change-font-family">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi libero laboriosam expedita cum eius quidem
+        enim ea a delectus sapiente impedit corporis, praesentium quia, ipsum reprehenderit nihil iusto nesciunt alias!
+    </p>
+    <p class="change-font-size">
+        <span class="font-style">Lorem</span>
+        <span class="font-weight">ipsum</span>
+        dolor sit amet consectetur adipisicing elit. Sapiente modi eos provident. Impedit a aliquam quia iste voluptate
+        ullam veniam ex quibusdam rerum magni in similique cupiditate, optio quo illum?
+    </p>
+    <p>
+        <span class="transform-uppercase">Lorem,</span>
+        ipsum dolor sit amet consectetur adipisicing elit. Deleniti officiis harum temporibus officia accusantium modi
+        ex at enim deserunt tempore ullam, facere laudantium minus, animi nobis tempora labore repellat cumque.
+    </p>
+    <p>
+        <span class="decor1">Lorem</span>
+        <span class="decor2">ipsum</span>
+        dolor sit amet consectetur adipisicing elit. Laudantium aliquam reprehenderit eum repellat dolores aliquid unde
+        maxime placeat, alias odio corrupti laborum voluptatum cum corporis et ipsa esse beatae eaque.
+    </p>
+    <h2 class="text-shadow">text shadow</h2>
+
+    <style>
+        .align-left {
+            text-align: left;
+        }
+
+        .align-right {
+            text-align: right;
+        }
+
+        .align-center {
+            text-align: center;
+        }
+
+        .align-justify {
+            text-align: justify;
+        }
+    </style>
+
+    <h3 class="align-left"> left </h3>
+    <h3 class="align-center"> center </h3>
+    <h3 class="align-right"> right </h3>
+    <p class="align-justify">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Inventore, molestias maiores voluptates temporibus
+        possimus iste ea aspernatur nemo ipsum officiis. Quam rem fugit officia fugiat repudiandae placeat consequatur
+        voluptatem excepturi?
+    </p>
+
+    <style>
+        .line-height {
+            /* this mean 1.3 of font-size */
+            line-height: 1.3;
+        }
+    </style>
+
+    <p class="line-height">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut tempore vero amet nemo mollitia excepturi omnis
+        repellendus molestias quo? Sint doloremque natus, facere magni deleniti ratione illum molestiae excepturi
+        maxime!
+    </p>
+
+    <style>
+        .letter-space {
+            letter-spacing: 10px;
+        }
+
+        .word-spacing {
+            word-spacing: 20px;
+        }
+    </style>
+    <h3 class="letter-space">letter spacing</h3>
+    <h3 class="word-spacing">word spacing</h3>
+
+    <style>
+        .ordered-list>li {
+            line-height: 1.5;
+        }
+
+
+        .ordered-list {
+            list-style-type: 1;
+            list-style-position: outside;
+            /* we have a better way for
+            list style images
+            we can load them as background
+            image who we can have a better controll
+            on them */
+            /* list-style-image: url(); */
+        }
+    </style>
+
+    <ol class="ordered-list">
+        <li>
+            <p>hi there</p>
+        </li>
+        <li>
+            <p>hi there</p>
+        </li>
+    </ol>
+
+    <ol start="4" reversed>
+        <li>a</li>
+        <li>b</li>
+        <li value="1">c</li>
+    </ol>
+
+    <style>
+        /* styling links */
+        /* links have diffrent state */
+        a:link {}
+
+        a:visited {}
+
+        a:focus {}
+
+        a:hover {}
+
+        a:active {}
+
+        /* is a best practice to use
+        a style same the browser
+        beacuse of user used to defualt
+        style */
+
+        /* this order is necessary
+        beacuse of specifity*/
+    </style>
+
+
+    <style>
+        @font-face {
+            font-family: "something";
+            src: url("link to font"),
+                url("multiple link for supporting");
+            font-style: normal;
+            font-weight: bold;
+            font-display: swap;
+            /* how to show
+            when loading */
+        }
+    </style>
+</body>
+
+</html>

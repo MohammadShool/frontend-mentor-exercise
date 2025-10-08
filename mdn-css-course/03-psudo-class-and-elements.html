@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <style>
+        /* first child of every thing */
+        :first-child {}
+
+        /* user action psudo class */
+
+        a:link {}
+
+        a:visited {}
+
+        a:hover {}
+
+        button:focus {}
+
+        /* psudo elements start with double colon :: */
+        p::first-line {}
+
+        /* know we know how to big bold a letter of first paragraph its a good practice */
+        p::first-letter {}
+
+        p::selection {
+            color: yellow;
+        }
+
+        /* this selector select first paragraph child of article and select first line of it */
+        article p:first-child::first-line {}
+
+        /* how to use generated content in css with psudo elements ? */
+        .search-bar::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: red;
+        }
+
+        /* how to combine this selectors to achive a purpose */
+
+        /* you can select all of paragraph of an article in every tree level */
+        /* for example if we have a article who have a paragraph directly in and another paragraph in a div and
+div is exist in article when we use combinator css select every paragraph of it */
+
+        /* so this select all paragraph who exist in article and dont matter when they are in dom tree
+just its important who be a child of article */
+        article p {}
+
+        /* but if you want to select a element just in first child level you have to use > syntax like this */
+        article>p {}
+
+        /* we see this combinator before */
+        /* in here paragraph is a sibling to article not a child of it */
+        article+p {}
+
+        /* if you want to select every sibling in a tree level after a heading use this */
+
+        h1~p {}
+    </style>
+</head>
+
+</html>

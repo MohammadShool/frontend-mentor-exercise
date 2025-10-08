@@ -1,0 +1,714 @@
+<html>
+
+<body>
+    <style>
+        /* how to handle conflicts between css propertys? */
+        /* we know that who css propertys can only have one value and if we have many selector
+    who refer to same element which one is more important? */
+        /* for answer this question we have to know about importance order just like this: */
+        /* tag name selector -> 1
+       class name selector -> 10
+       id selector 100 */
+        /* then browser calculare your selector and give it a important order then apply css property value to most
+    important selector */
+        /* p > span {
+        background: yellow;
+    } 0-0-2 */
+        /* note: what if we use a multiple class names and tag name selector instead of a id selector?
+    if a id be in there,it can beat you and force browser to use it value :-) */
+        /* but what happen if we have a same specificity? now casace layers and cascade concept help us */
+        /* p {
+        background-color: white;
+    } */
+        /* p {
+        background-color: black;
+    } */
+        /* now paragraph background most be black beacuse of cascade  */
+        /* and for fixing css conflict or a unexpected thing in your document
+    you can think about inheritance for example when we apply a custom font to a container like div in
+    css every textual element in there(except input element in some browsers) inheritance font family from their
+    parent */
+
+        /* p {
+        font-family: tahoma;
+    } */
+
+        /* p > span {
+        font-family: 'Franklin Gothic Medium';
+    } */
+        /* so for applying another font-family to span you have to do this otherwise span inheritance
+    it from it parent */
+
+        /* for controlling inheritance in css we have some valuse who you can apply
+    them to most of css propertys like: inherit, initial, revert (this look like unset)
+    revert-layer */
+
+        /* p {
+        font-size: inherit;
+        font-size: initial;
+        font-size: unset;
+    } */
+
+        /* p {
+        all: unset;
+    } */
+        /* so think about it you can use of all propery and set a global behavior for inheritance in that */
+        /* and final point is who inline styles in html is most specifity (1-0-0-0) */
+        /* <h1 style="background-color:black;"></h1> */
+        /* p{
+        font-size: 18px!important;
+     }
+     #id-to-a-paragraph {
+        font-size: 16px;
+     } */
+        /* and we have important who isnt a good practice just use it when you are in a cms or other same situnation */
+
+        /*------------------*/
+        /* units and values */
+        /*------------------*/
+    </style>
+
+    <h1> hi there </h1>
+
+    <style>
+        /* absolute versus releative values */
+        .d1 {
+            background-color: teal;
+            color: white;
+            width: 200px;
+        }
+
+        .d2 {
+            background-color: blueviolet;
+            color: white;
+            width: 50em;
+        }
+
+        .change-font-size {
+            font-size: 20px;
+        }
+
+        .d3 {
+            width: 50vw;
+            background-color: brown;
+            color: white;
+        }
+
+        .d4 {
+            width: 40%;
+            background-color: chocolate;
+            color: white;
+        }
+
+        /* percentage can use in most of propertys like width height font-size and other things like
+    border-radius */
+    </style>
+
+    <div>
+        <div class="d1">iam absolute</div>
+        <div class="d2">i am releative to font-size</div>
+        <div class="d2 change-font-size">i am releative to font-size</div>
+        <div class="d3">i am releative to viewport width</div>
+        <div class="d4">i am a percentage of my parent</div>
+    </div>
+
+    <style>
+        /* <color> we have rgb method for color and hue and we can use color keywords 
+    or we can use hex codes or something else like hwb , hsl or ... */
+        .color-black {
+            color: white;
+            background-color: black;
+        }
+
+        .color-yellow {
+            color: black;
+            background-color: yellow;
+        }
+
+        .color-blue {
+            color: white;
+            background-color: blue;
+        }
+
+        .hex-color {
+            background-color: #1dcf79;
+        }
+
+        .rgb {
+            color: white;
+            background-color: rgb(100, 100, 100);
+        }
+
+        .alpha-rgb {
+            background-color: rgb(100 100 100 / .5);
+        }
+
+        /* first propery 50 is hue angle */
+        .color-hwb {
+            background-color: hwb(50 40% 10%);
+        }
+
+        /* we can pass alpha to hsl method either just like rgb method with / character */
+        .color-hsl {
+            background-color: hsl(200, 47%, 60%);
+        }
+
+        /* <image> type we can pass a real image with url method or we can create linear gradiant */
+
+        .image-real {
+            background-image: url("https://link.to.your.real.image");
+        }
+
+        .image-gradient {
+            background-image: linear-gradient(180deg, rgb(192 50 60), rgb(0 212 255));
+            padding: 20px;
+            color: white;
+            font-weight: bold;
+        }
+
+        /* for images we have a position type for example */
+        .image-class {
+            background-position: right 60px;
+        }
+
+        /* when we can use <strings> in css? for example: */
+        .someclass::before {
+            content: "do something";
+        }
+    </style>
+
+
+    <div>
+        <h1> color value types </h1>
+        <div>we have color keywords
+            <div class="color-black">i am black</div>
+            <div class="color-yellow">i am yellow</div>
+            <div class="color-blue">i am blue</div>
+        </div>
+        <div> and we have hex colors like:
+            <div class="hex-color">i am #1dcf79</div>
+        </div>
+
+        <div>
+            also we have rgb method to blend red and green and blue colors and create a new one:
+            <div class="rgb">i am a rgb color</div>
+            <div class="alpha-rgb">i am a rgb color with alpha</div>
+        </div>
+
+        <div class="color-hwb">
+            i am a hwb method color
+        </div>
+        <div class="color-hsl">i am hsl color</div>
+        <div class="image-gradient">i am image gradiant</div>
+    </div>
+
+    <style>
+        .calc-function {
+            background-color: red;
+            color: white;
+            width: calc(90% - 50px);
+        }
+
+        /* also we have min max and clamp functions */
+        .min-function {
+            background-color: black;
+            color: white;
+            width: min(50px, 10rem, 50%);
+        }
+    </style>
+
+    <div>
+        <h1>functions</h1>
+        <div class="calc-function">i am a calculated value</div>
+        <div class="min-function">i am a min value</div>
+    </div>
+
+
+    <style>
+        /* note: do not set a margin or padding percentage beacuse of percentage working with
+    element width */
+        .min-max {
+            /* we have min-max propertys this good practice for making images responsive */
+            min-width: 500px;
+            width: 80%;
+            max-width: 1000px;
+        }
+
+        /* also we have viewport units who can help us to create a fullscreen containers and push
+    other contents out of viewport */
+
+        /* for images we have background-repeat with common values like repeat no-repeat and ... */
+        .some-image-class {
+            background-repeat: no-repeat;
+            background-repeat: repeat;
+            background-repeat: repeat-x;
+            background-repeat: repeat-y;
+            background-repeat: space;
+            background-repeat: round;
+        }
+
+        .image-background-size {
+            background-size: cover;
+            background-size: contain;
+            background-size: 80px 10em;
+        }
+
+        .image-backgorund-position {
+            background-position: top center;
+            background-position: 20px 30px;
+        }
+
+        .two-type-of-linear-gradient {
+            background-image: linear-gradient(150deg, white, black);
+            background-image: radial-gradient(150deg, white, black);
+        }
+
+        /* also we can use background-image to load multiple images or use multiple gradient
+    in this situnation we have to use url function or gradient function just like a array of urls or
+    array of position states or .... */
+
+        .background-attachment {
+            /* background attachment which can take scroll or fixed or local values */
+            background-attachment: scroll;
+            /* scroll image with viewport */
+            background-attachment: fixed;
+            /* when  we scroll down background is fixed */
+            background-attachment: local;
+            /* scroll background with container */
+        }
+    </style>
+
+
+    <style>
+        .border-1 {
+            border: 3px solid black;
+        }
+
+        .border-2 {
+            border-top-style: dashed;
+            border-top-color: aqua;
+            border-bottom-style: groove;
+            border-bottom-color: blueviolet;
+            border-width: 10px;
+            border-right-style: ridge;
+            border-right-color: brown;
+            border-left-style: double;
+            border-left-color: chocolate;
+            padding: 20px;
+            margin: 20px 0px;
+        }
+
+        .border-3 {
+            border: 5px ridge greenyellow;
+            padding: 10px;
+            margin: 20px;
+            border-radius: 50%;
+            border-top-right-radius: 50px 20px;
+            border-bottom-left-radius: 20px 70px;
+        }
+    </style>
+    <div>
+        <h1>borders</h1>
+        <div class="border-1">border 1</div>
+        <div class="border-2">border 2</div>
+        <div class="border-3">border-3</div>
+    </div>
+
+
+
+    <style>
+        .overflow-box {
+            width: 100px;
+            height: 100px;
+            background: chocolate;
+            padding: 20px;
+            color: black;
+            font-family: tahoma;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-greenyellow {
+            background-color: greenyellow;
+        }
+
+        .overflow-1 {
+            /* overflow: visible; */
+            overflow: hidden;
+        }
+
+        .overflow-2 {
+            overflow: hidden;
+        }
+
+        .overflow-3 {
+            overflow: auto;
+        }
+
+        .overflow-4 {
+            overflow-y: scroll;
+        }
+
+        .overflow-5 {
+            overflow-x: scroll;
+        }
+
+        .overflow-6 {
+            overflow-x: auto;
+        }
+
+        .container {
+            display: flex;
+        }
+    </style>
+    <h1>data overflow</h1>
+    <div class="container">
+        <div class="overflow-1 overflow-box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid inventore
+            similique eligendi eveniet ab assumenda impedit dolor. Aliquam repellat quas amet qui sint cupiditate velit
+            rerum consequatur hic natus, aperiam sed aliquid adipisci et maiores totam illo ullam obcaecati corporis
+            architecto magni? Praesentium autem iste recusandae nostrum laboriosam.</div>
+        <div class="overflow-2 overflow-box bg-red">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+            nisi sequi quibusdam voluptate. Repudiandae, a, corrupti iure nam odio iusto quaerat ipsum beatae id facere
+            recusandae delectus, minima sed laborum.</div>
+        <div class="overflow-3 overflow-box bg-greenyellow">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Delectus nisi sequi quibusdam voluptate. Repudiandae, a, corrupti iure nam odio iusto quaerat ipsum beatae
+            id facere recusandae delectus, minima sed laborum.</div>
+        <div class="overflow-4 overflow-box">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus nisi
+            sequi quibusdam voluptate. Repudiandae, a, corrupti iure nam odio iusto quaerat ipsum beatae id facere
+            recusandae delectus, minima sed laborum.</div>
+        <div class="overflow-5 overflow-box bg-red">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+            nisi sequi quibusdam voluptate. Repudiandae, a, corrupti iure nam odio iusto quaerat ipsum beatae id facere
+            recusandae delectus, minima sed laborum.</div>
+        <div class="overflow-6 overflow-box bg-greenyellow">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Delectus nisi sequi quibusdam voluptate. Repudiandae, a, corrupti iure nam odio iusto quaerat ipsum beatae
+            id facere recusandae delectus, minima sed laborum.</div>
+    </div>
+
+    <style>
+        /* replaces elements like images and videos have a aspect ratio */
+        /* is a good practice to put a image in a container with a width then set max-width 100% to image */
+        /* we can set object-fit to our images to size and fit a box */
+        .image-object-fit {
+            object-fit: cover;
+            /* object-fit: contain; */
+            object-position: right;
+        }
+
+        /* note: replaced elements such as images and videos act in a diffrent way for example when we use them in
+    a grid layout they just adjust their position and take own size depended on aspect ratio */
+
+
+        /* for styling forms in css */
+        /* styling items like a button or a text button can be easy but styling something like color type
+    who have a color picker tool can be harder */
+
+        input[type="text"] {
+            border: 1px solid gray;
+            border-radius: 50%;
+            background-color: white;
+        }
+
+        input[type="text"]::placeholder {
+            color: gray;
+        }
+
+        input[type="submit"]:focus {
+            background-color: rgb(228, 228, 228);
+        }
+
+        /* note: you have to normalize form behavior in some browser so its good to do this: */
+        button,
+        input,
+        select,
+        textarea {
+            box-sizing: border-box;
+            font-family: inherit;
+            font-size: 100%;
+            padding: 0;
+            margin: 0;
+        }
+
+        textarea {
+            overflow: auto;
+        }
+
+        /* this is a good practice beacuse of in some browser form element do not inheritance their font-family
+    and font-size propertys from their parrent */
+
+
+        table {
+            table-layout: fixed;
+            /* this property is a good thing beacuse of table datas width set to head width and
+        grow in height */
+            border-collapse: collapse;
+            width: 80%;
+            min-width: 1000px;
+            margin: 0 auto;
+            border-top: 1px solid #999999;
+            border-bottom: 1px solid #999999;
+        }
+
+        th,
+        td {
+            padding: 0.6em;
+        }
+
+        tr :nth-child(2),
+        tr :nth-child(3) {
+            text-align: right;
+            width: 15%;
+        }
+
+        tr :nth-child(1),
+        tr :nth-child(4) {
+            text-align: left;
+            width: 35%;
+        }
+
+        tfoot tr :nth-child(1) {
+            text-align: right;
+        }
+
+        tfoot tr :nth-child(2) {
+            text-align: left;
+        }
+
+        tfoot {
+            border-top: 1px solid #999999;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #eeeeee;
+        }
+
+        caption {
+            caption-side: bottom;
+            font-style: italic;
+            letter-spacing: 1px;
+        }
+    </style>
+    <div>
+        <h1>styling tables</h1>
+        <table>
+            <caption>A summary is nicely marked up most famous </caption>
+            <thead>
+                <tr>
+                    <th>band</th>
+                    <th>year formed</th>
+                    <th>no of</th>
+                    <th>most famous</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>something</td>
+                    <td>something</td>
+                    <td>something</td>
+                    <td>something</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="2">total</th>
+                    <td colspan="2">20</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <style>
+        /* advanced css effects  */
+
+        .box-shadow {
+            width: 100%;
+            padding: 10px;
+            margin: 10px;
+            /* multiple box shadows */
+            box-shadow: 5px 5px 5px gray,
+                -5px -5px 5px gray;
+        }
+
+        .filter-item {
+            flex: 1;
+            height: 50px;
+        }
+
+        .filter-grayscale {
+            background-color: red;
+            filter: grayscale(.5);
+        }
+
+        .filter-drop-shadow {
+            box-sizing: border-box;
+            border: 5px dotted purple;
+            margin-left: 5px;
+            filter: drop-shadow(5px 5px 0px gray);
+        }
+
+        .filter-for-compare {
+            box-sizing: border-box;
+            border: 5px dotted purple;
+            margin-left: 5px;
+            box-shadow: 5px 5px 0px gray;
+        }
+
+        /* also we have blend mode */
+    </style>
+
+    <div class="container">
+        <div class="box-shadow">
+            shadow
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="filter-grayscale filter-item">
+
+        </div>
+        <div class="filter-item filter-drop-shadow">
+
+        </div>
+        <div class="filter-item filter-for-compare"></div>
+    </div>
+
+    <style>
+        .circle-shaped {
+            width: 120px;
+            height: 120px;
+            background-color: brown;
+            border-radius: 50%;
+            shape-outside: circle(50%);
+            float: left;
+        }
+
+        .fix-float {
+            display: flow-root;
+        }
+    </style>
+
+    <div class="fix-float">
+        <div class="circle-shaped"></div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus dolorem ex, asperiores accusantium
+            magni non aspernatur ratione? Accusamus beatae corporis cum perspiciatis, expedita laudantium, quis
+            reprehenderit magni dignissimos numquam vel?
+        </p>
+    </div>
+
+
+    <style>
+        /*
+    also we have this beacuse of we can create a cover for text from an image
+    .text-clip {
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
+    */
+    </style>
+
+
+    <style>
+        /* also we have cascade layers */
+        /* for understande cascade layer you have to know how
+    values order and ready to apply to propertys in a page */
+        /* first we have to know we have this orgins: */
+        /*
+    1- user agent normal styles
+    2- user normal styles
+    3- author normal styles
+    4- styles being animated
+    5- author important styles
+    6- user important styles
+    7- user agent important styles
+    8- styles being transitioned
+    */
+        /* so we have 8 specifity for style origins 
+    also we have sub layers in each of this origin layers who we
+    call them cascade layers */
+        /* note: notice to this point who !important values who 
+    apply to a property is another orgin and you can not check
+    this values in cascade specifity */
+        /* we can create cascade layers with layer rule set like this: */
+        .test-something1 {
+            width: 100px;
+            height: 100px;
+            /* background-color:  red; */
+        }
+
+        @layer {
+            .some-class {
+                color: black;
+                /* apply some css in this block */
+            }
+
+            .test-something1 {
+                background-color: antiquewhite;
+            }
+        }
+
+        /* this is a anonymouse layer and we can create a named
+    layer either just like this: */
+        @layer general {
+            /* do something in here */
+
+            .test-something1 {
+                background-color: red;
+            }
+        }
+
+        @layer another {
+
+            .test-something1 {
+                background-color: blue;
+            }
+        }
+
+        @layer another, general;
+        /* we can not to change layer order so its best practice
+    to declare this line in first line */
+        /* so specifity in cascade layer is cascade except unlayerd
+    styles */
+        /* we can just chnage creation in media querys  */
+
+        /* we can import styles to a named layer or unnamed */
+        @import "components.css" layer(components);
+        /* unnamed */
+        @import "utilitie.css" layer(a);
+        /* also you can import more css files in a layer */
+        /* and we can add support feature to import just like this */
+        @import "something.css" layer(something) supports(display: ruby) (width >=32em);
+
+        @import "import-nested.css" layer(components.button);
+    </style>
+
+
+    <div class="test-something1"></div>
+
+    <style>
+        .diffrent-write-mode {
+            background-color: purple;
+            padding-inline-start: 30px;
+        }
+
+        .container-10 {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            color: white;
+
+            writing-mode: vertical-lr;
+        }
+    </style>
+
+    <div class="container-10">
+        <h1 class="diffrent-write-mode">hello world</h1>
+        <h1 class="diffrent-write-mode">hello world</h1>
+    </div>
+
+</body>
+
+</html>
