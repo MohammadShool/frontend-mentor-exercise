@@ -1,46 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./assets/images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
     <title>Frontend Mentor | Social links profile</title>
     <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main>
-      <section>
-        <div class="profile">
-          <figure>
-            <img alt="jessica profile image" src="./assets/images/avatar-jessica.jpeg" />
-            <figcaption>Jessica Randall</figcaption>
-          </figure>
-          <address>London, United Kingdom</address>
-          <p>"Front-end developer and avid reader."</p>
-        </div>
-        <ul>
-          <li><a href="#github">GitHub</a></li>
-          <li><a href="#FrontendMentor">Frontend Mentor</a></li>
-          <li><a href="#LinkedIn">LinkedIn</a></li>
-          <li><a href="#Twitter">Twitter</a></li>
-          <li><a href="#Instagram">Instagram</a></li>
-        </ul>
-      </section>
+</head>
+
+<body>
+    <main class="container--fullscreen">
+        <section class="social">
+            <header class="social__profile">
+                <div class="social__avatar">
+                    <img alt="jessica profile avatar" src="./assets/images/avatar-jessica.jpeg" />
+                </div>
+                <h1 class="social__name">Jessica Randall</h1>
+                <address>
+                    <p class="social__address">London, United Kingdom</p>
+                </address>
+                <p class="social_biography">"Front-end developer and avid reader."</p>
+            </header>
+            <ul class="socila__medias">
+                <li class="social__medias-item"><a title="go to jessica github account" hreflang="en" href="#github">GitHub</a></li>
+                <li class="social__medias-item"><a title="go to jessica front end mentor account" hreflang="en" href="#FrontendMentor">Frontend Mentor</a></li>
+                <li class="social__medias-item"><a title="go to jessica linked in account" hreflang="en" href="#LinkedIn">LinkedIn</a></li>
+                <li class="social__medias-item"><a title="go to jessica twitter account" hreflang="en" href="#Twitter">Twitter</a></li>
+                <li class="social__medias-item"><a title="go to jessica instagram account" hreflang="en" href="#Instagram">Instagram</a></li>
+            </ul>
+        </section>
     </main>
 
     <footer class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by
-      <a href="https://github.com/MohammadShool/social-links-profile-main"
-        >Mohammad</a
-      >.
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by
+        <a href="https://github.com/MohammadShool/social-links-profile-main">Mohammad</a>.
     </footer>
-  </body>
+</body>
+
 </html>
