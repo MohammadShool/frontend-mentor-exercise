@@ -1,0 +1,223 @@
+@import url(./reset.css);
+
+@font-face {
+    font-family: "roboto";
+    src: url(./assets/fonts/Roboto-Regular.ttf) format("truetype");
+}
+
+@font-face {
+    font-family: "roboto";
+    src: url(./assets/fonts/Roboto-Bold.ttf);
+    font-weight: bold;
+}
+
+:root {
+    --primary-color: #ff6257;
+    --second-color: #242742;
+    --third-color: #36384e;
+    --fourth-color: #949494;
+    --fifth-color: #ffffff;
+}
+
+body {
+    font-size: 16px;
+    font-family: "roboto", sans-serif;
+    background-color: var(--third-color);
+}
+
+.primary-button {
+    background-color: var(--second-color);
+    color: var(--fifth-color);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.primary-button:hover, .primary-button:focus {
+    cursor: pointer;
+    background: linear-gradient(90deg, var(--primary-color), #f89d41);
+    box-shadow: 0 0 50px 0 #ff625780;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up {
+    position: relative;
+    margin: auto 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    
+}
+
+.sign-up__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--fifth-color);
+    max-width: 925px;
+    margin: auto;
+}
+
+.sign-up__card--closed {
+    display: none;
+}
+
+.sign-up__container {
+    padding: 1em;
+    max-width: 400px;
+    padding-bottom: 4em;
+}
+
+.sign-up__title {
+    font-size: calc(2rem + 1vw);
+    color: var(--second-color);
+}
+
+.sign-up__desc {
+    color: var(--second-color);
+}
+
+.features-list {
+    color: var(--second-color);
+}
+
+.features-list__item {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 1em;
+}
+
+.features-list__item-icon {
+    margin-right: 1em;
+}
+
+.subscription-form {
+    margin-top: 2rem;
+}
+
+.subscription-form__row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.subscription-form__label {
+    font-weight: bold;
+    color: var(--third-color);
+    display: block;
+}
+
+.subscription-form__error {
+    color: var(--primary-color);
+}
+
+.subscription-form__input {
+    padding: 1em;
+    display: block;
+    border-radius: 10px;
+    border: 2px solid rgb(221, 221, 221);
+    color: var(--fourth-color);
+    margin-top: .5em;
+    width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .25s ease;
+}
+
+.subscription-form__input--error{
+    background-color: #fff3f2;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.subscription-form__button {
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 98%;
+}
+
+/* successfull popup */
+
+.sign-up__successfull {
+    display: none;
+    /* display: flex; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--fifth-color);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 2em;
+}
+
+.sign-up__successfull--opened {
+    display: flex;
+}
+
+.successfull__icon {
+    margin-top: auto;
+}
+
+.successfull__title {
+    font-size: calc(2rem + .5vw);
+    margin: 1rem 0;
+    color: var(--third-color);
+}
+
+.successfull__desc {
+    color: var(--second-color);
+    margin: 0;
+    margin-bottom: auto;
+}
+
+.successfull__close-btn {
+    font-weight: bold;
+    width: 100%;
+    margin-top: 2em 0;
+}
+
+@media screen and (min-width: 769px) {
+    .sign-up__card {
+        /* display: none; */
+        padding: 1em;
+    }
+
+    .sign-up__card {
+        flex-direction: row;
+        border-radius: 20px;
+    }
+
+    .sign-up__container {
+        margin: 0 auto;
+    }
+
+    .sign-up__avatar {
+        order: 1;
+    }
+
+    .sign-up__successfull {
+        position: static;
+        max-width: 450px;
+        margin: 0 auto;
+        padding: 3em;
+        border-radius: 20px;
+    }
+}
+
+.attribution {
+    font-style: 14px;
+    background-color: black;
+    color: white;
+    font-family: tahoma, sans-serif;
+    padding: 1em;
+    text-align: center;
+}
