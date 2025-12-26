@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./index.js" defer></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+</head>
+
+<body>
+  <noscript>this application need to javascript to work</noscript>
+  
+  <main class="container">
+    <div data-fetch-url="./data.json" class="time-track">
+      <div class="time-track__user">
+        <div class="time-track__user-container">
+          <img class="time-track__user-icon" alt="" src="./images/image-jeremy.png" />
+          <div>
+            <span class="time-track__user-name-label">Report for</span>
+            <h1 class="time-track__user-name">Jeremy Robson</h1>
+          </div>
+        </div>
+        <div class="time-track__switch-container">
+          <button data-time-period="daily" class="time-track__switch time-track__switch--active">Daily</button>
+          <button data-time-period="weekly" class="time-track__switch">Weekly</button>
+          <button data-time-period="monthly" class="time-track__switch">Monthly</button>
+        </div>
+      </div>
+      
+      <!-- work time -->
+      <div class="time-track__category time-track__category--work">
+        <div class="time-track__category-container">
+          <div class="time-track__row">
+            <span class="time-track__name">Work</span>
+            <img alt="" src="./images/icon-ellipsis.svg" />
+          </div>
+          <div class="time-track__row">
+            <span class="time-track__time">32hrs</span>
+            <span class="time-track__last">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- play time -->
+      <div class="time-track__category time-track__category--play">
+        <div class="time-track__category-container">
+          <div class="time-track__row">
+            <span class="time-track__name">Play</span>
+            <img alt="" src="./images/icon-ellipsis.svg" />
+          </div>
+          <div class="time-track__row">
+            <span class="time-track__time">32hrs</span>
+            <span class="time-track__last">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- study time  -->
+      <div class="time-track__category time-track__category--study">
+        <div class="time-track__category-container">
+          <div class="time-track__row">
+            <span class="time-track__name">Study</span>
+            <img alt="" src="./images/icon-ellipsis.svg" />
+          </div>
+          <div class="time-track__row">
+            <span class="time-track__time">32hrs</span>
+            <span class="time-track__last">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- exercise time  -->
+      <div class="time-track__category time-track__category--exercise">
+        <div class="time-track__category-container">
+          <div class="time-track__row">
+            <span class="time-track__name">Exercise</span>
+            <img alt="" src="./images/icon-ellipsis.svg" />
+          </div>
+          <div class="time-track__row">
+            <span class="time-track__time">32hrs</span>
+            <span class="time-track__last">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- social time  -->
+      <div class="time-track__category time-track__category--social">
+        <div class="time-track__category-container">
+          <div class="time-track__row">
+            <span class="time-track__name">Social</span>
+            <img alt="" src="./images/icon-ellipsis.svg" />
+          </div>
+          <div class="time-track__row">
+            <span class="time-track__time">32hrs</span>
+            <span class="time-track__last">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+      
+      <!-- self care time  -->
+      <div class="time-track__category time-track__category--self-care">
+        <div class="time-track__category-container">
+          <div class="time-track__row">
+            <span class="time-track__name">Self Care</span>
+            <img alt="" src="./images/icon-ellipsis.svg" />
+          </div>
+          <div class="time-track__row">
+            <span class="time-track__time">32hrs</span>
+            <span class="time-track__last">Last Week - 36hrs</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Mohammad Shool</a>.
+    </div>
+  </footer>
+</body>
+
+</html>
