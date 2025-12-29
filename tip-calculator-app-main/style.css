@@ -1,0 +1,321 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url(./reset.css);
+
+:root {
+    --green-400: #26c0ab;
+    --green-900: #00494d;
+    --grey-500: #5e7a7d;
+    --grey-400: #7f9c9f;
+    --grey-200: #c5e4e7;
+    --grey-50: #f4fafb;
+    --white: #ffffff;
+}
+
+html {
+    font-size: 25px;
+}
+
+body {
+    background-color: var(--grey-200);
+    font-family: "Space Mono", monospace, sans-serif;
+    font-weight: 700;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text {
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .4em;
+    color: var(--grey-500);
+    text-align: center;
+    padding: .85em 0 .65em .5em;
+}
+
+.bill {
+    background-color: var(--white);
+    border-radius: 20px 20px 0 0;
+    padding: 1.25em;
+    display: flex;
+    flex-direction: column;
+    color: var(--grey-500);
+    max-width: 920px;
+    width: 100%;
+}
+
+.bill__left {
+    display: flex;
+    flex-direction: column;
+}
+
+.bill label,
+.bill__tip-label {
+    font-size: .65rem;
+}
+
+.bill input {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .25em .75em;
+    border-radius: 5px;
+    text-align: right;
+    max-width: 100%;
+}
+.bill input[type=number]:hover, .bill input[type=number]:focus {
+    outline: 3px solid var(--green-400);
+}
+
+.bill__input {
+    background-color: var(--grey-50);
+    width: 100%;
+    color: var(--green-900);
+}
+
+.bill__input-wrapper {
+    margin-top: .25em;
+    position: relative;
+    width: 100%;
+}
+
+.bill__input-wrapper::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 10px);
+    left: 5%;
+    width: 20px;
+    height: 20px;
+    background-image: url(./images/icon-dollar.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+/* .bill__tip-label {
+    margin-bottom: .75em;
+} */
+
+.bill__tip-container {
+    margin-top: 1.25em;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bill__tip-container * {
+    width: 50%;
+}
+
+.bill__tip-radio-container {
+    margin-top: .75em;
+    padding: 0 .35em;
+    /* margin-top: .2em; */
+}
+
+.bill__tip-radio-container:nth-child(even) {
+    padding-left: 0;
+}
+
+.bill__tip-radio-container:nth-child(odd) {
+    padding-right: 0;
+}
+
+.bill__tip-radio {
+    display: block;
+    width: 100%;
+    position: relative;
+    padding: .25em .75em;
+    border-radius: 5px;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--green-900);
+}
+
+.bill__tip-radio span {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.bill__tip-container .bill__tip {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+
+.bill__tip-container .bill__tip:focus + .bill__tip-radio {
+    outline: 3px solid var(--green-400);
+}
+
+.bill__tip-container .bill__tip:checked+.bill__tip-radio {
+    color: var(--green-900);
+    background-color: var(--green-400);
+}
+
+.bill__custom-tip {
+    background-color: var(--grey-50);
+    width: 100%;
+}
+
+.bill__people-label {
+    margin-top: 1.75em;
+}
+
+.bill__people-wrapper {
+    margin-top: .25em;
+    position: relative;
+}
+
+.bill__people-wrapper::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: url(./images/icon-person.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 5%;
+    top: calc(50% - 10px);
+}
+
+.bill__people {
+    background-color: var(--grey-50);
+    color: var(--green-900);
+    width: 100%;
+}
+
+/* bill result */
+
+.bill__result {
+    margin-top: 1.25em;
+    padding: .65em;
+    border-radius: 20px;
+    background-color: var(--green-900);
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+}
+
+.bill__result-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+/* .bill__result-row:first-child {
+    margin-top: 0;
+} */
+
+.bill__result-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.bill__result-title {
+    font-size: .65rem;
+    color: var(--white);
+}
+
+.bill__result-desc {
+    font-size: .5rem;
+}
+
+.bill__result-tip {
+    color: var(--green-400);
+    font-size: clamp(1rem, .5rem + 2vw, 2rem);
+}
+
+.bill__reset-btn {
+    margin-top: 1.25em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--green-900);
+    background-color: var(--green-400);
+    width: 100%;
+    text-align: center !important;
+}
+
+.bill__reset-btn:hover, .bill__reset-btn:focus {
+    filter: brightness(1.1);
+    box-shadow: 0 0 50px -20px var(--green-400);
+}
+
+.bill__input--error {
+    outline: 2px solid #ff8585;
+}
+
+.bill__error {
+    position: absolute;
+    right: 0;
+    font-size: 0.65rem;
+    color: #ff8585;
+    bottom: 100%;
+}
+
+@media screen and (min-width: 769px) {
+    .bill {
+        flex-direction: row;
+        border-radius: 20px;
+    }
+
+    .bill__left {
+        width: 50%;
+        padding-right: 2em;
+    }
+
+    .bill__result {
+        width: 50%;
+        margin-top: 0;
+    }
+
+    .bill__reset-btn {
+        margin-top: auto;
+    }
+}
+
+.attribution {
+    background-color: black;
+    color: white;
+    padding: 1em;
+    font-size: 16px;
+    font-family: tahoma,sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.attribution::selection {
+    color: black;
+    background-color: #ff531f;
+}
+
+.attribution a {
+    color: #ffe51f;
+    text-decoration: none;
+    position: relative;
+}
+
+.attribution a::selection {
+    background-color:#ffe51f;
+    color: black;
+}
+
+.attribution a::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    top: calc(100% - 2px);
+    left: 50%;
+    height: 2px;
+    background-color: #ff531f;
+    transition: all .25s ease;
+}
+
+.attribution a:hover::after, .attribution a:focus::after {
+    width: 100%;
+    left: 0;
+}

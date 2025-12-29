@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="./index.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+
+<body>
+
+  <main class="container">
+    <h1 class="header-text">spli<br>tter</h1>
+
+    <form class="bill">
+      <div class="bill__left">
+        <label for="bill-number" class="bill-label">Bill</label>
+        <div class="bill__input-wrapper">
+          <span class="bill__error"></span>
+          <input class="bill__input" id="bill-number" placeholder="0" type="number" name="bill" />
+        </div>
+
+        <fieldset class="bill__tip-container">
+          <legend class="bill__tip-label">Select Tip %</legend>
+
+          <div class="bill__tip-radio-container">
+            <input class="bill__tip" type="radio" name="tip-percent" value="5" id="5pr">
+            <label class="bill__tip-radio" for="5pr">
+              <span>5%</span>
+            </label>
+          </div>
+
+          <div class="bill__tip-radio-container">
+            <input class="bill__tip" type="radio" name="tip-percent" value="10" id="10pr">
+            <label class="bill__tip-radio" for="10pr">
+              <span>10%</span>
+            </label>
+          </div>
+
+
+          <div class="bill__tip-radio-container">
+            <input class="bill__tip" type="radio" name="tip-percent" value="15" id="15pr">
+            <label class="bill__tip-radio" for="15pr">
+              <span>15%</span>
+            </label>
+          </div>
+
+
+          <div class="bill__tip-radio-container">
+            <input class="bill__tip" type="radio" name="tip-percent" value="25" id="25pr">
+            <label class="bill__tip-radio" for="25pr">
+              <span>25%</span>
+            </label>
+          </div>
+
+
+          <div class="bill__tip-radio-container">
+            <input class="bill__tip" type="radio" name="tip-percent" value="50" id="50pr">
+            <label class="bill__tip-radio" for="50pr">
+              <span>50%</span>
+            </label>
+          </div>
+
+          <div class="bill__tip-radio-container">
+            <input class="bill__custom-tip" name="custom-tip" type="number" placeholder="Custom" />
+          </div>
+        </fieldset>
+
+        <label for="people-count" class="bill__people-label">Number of People</label>
+        <div class="bill__people-wrapper">
+          <span class="bill__error"></span>
+          <input id="people-count" placeholder="0" class="bill__people" name="people" type="number" />
+        </div>
+      </div>
+
+      <div class="bill__result">
+        <div class="bill__result-row">
+          <div class="bill__result-info">
+            <span class="bill__result-title">Tip Amount</span>
+            <span class="bill__result-desc">/ person</span>
+          </div>
+          <span id="tip-amount" class="bill__result-tip">$0.00</span>
+        </div>
+
+        <div class="bill__result-row">
+          <div class="bill__result-info">
+            <span class="bill__result-title">Total</span>
+            <span class="bill__result-desc">/ person</span>
+          </div>
+          <span id="bill-amount" class="bill__result-tip">$0.00</span>
+        </div>
+
+        <input id="reset-tip-calculator" class="bill__reset-btn" type="reset" value="Reset" />
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Mohammad Shool</a>.
+    </div>
+  </footer>
+</body>
+
+</html>
