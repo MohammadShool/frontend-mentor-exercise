@@ -1,0 +1,135 @@
+@import url(./reset.css);
+
+@font-face {
+    font-family: WorkSans;
+    src: url(./assets/fonts/WorkSans-VariableFont_wght.ttf);
+}
+
+:root {
+    --white: #ffffff;
+    --purple-100: #f9f0ff;
+    --purple-600: #8c6991;
+    --purple-950: #2f1533;
+}
+
+html {
+    font-size: clamp(100%, 70% + 1vw, 110%);
+}
+
+body {
+    font-family: WorkSans, sans-serif;
+    background-color: #f9eeff;
+    background-image: url(assets/images/background-pattern-mobile.svg);
+    background-repeat: repeat-x;
+}
+
+.container {
+    min-height: 100vh;
+    padding: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 100px;
+    
+}
+
+.faqs {
+    max-width: 600px;
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 0 1em;
+}
+
+.faqs__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: var(--purple-950);
+    margin-bottom: 0;
+}
+
+.faqs__title::before {
+    content: "";
+    background-image: url(./assets/images/icon-star.svg);
+    background-size: contain;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    margin-right: .5em;
+}
+
+.according {
+    border-bottom: 1px solid var(--purple-100);
+    padding: 1em 0;
+}
+
+.according:last-child {
+    border-bottom: 0;
+}
+
+.according__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--purple-950);
+}
+
+.according__title button {
+    width: 100%;
+    color: inherit;
+    padding-right: 58px;
+    position: relative;
+    font-size: inherit;
+    text-align: inherit;
+    font-weight: inherit;
+}
+
+.according__title > button::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background-size: contain;
+    position: absolute;
+    right: 0;
+    top: calc(50% - 15px);
+}
+
+.according__title > button[aria-expanded=true]::after{
+    background-image: url(./assets/images/icon-minus.svg);   
+}
+
+.according__title > button[aria-expanded=false]::after{
+    background-image: url(./assets/images/icon-plus.svg);   
+}
+
+.according__title > button:hover {
+    cursor: pointer;
+    color: var(--purple-600);
+}
+
+.according__title > button:focus::after {
+    outline: 2px solid var(--purple-600);
+}
+
+.according__desc {
+    color: var(--purple-600);
+    font-size: .95rem;
+    line-height: 1.6;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.hidden-according {
+    display: none;
+}
+
+@media screen and (min-width: 769px) {
+    body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+    }
+
+    .faqs {
+        padding: 0 2em;
+    }
+}
