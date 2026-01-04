@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Contact form</title>
+</head>
+
+<body>
+  <main class="container">
+    <section class="contact" aria-labelledby="contact__title">
+      <h1 class="contact__title" id="contact__title">Contact Us</h1>
+      <form class="contact__form" novalidate>
+
+        <div class="contact__input-container">
+          <label class="row contact__input-label" for="contact__first-name">
+            First Name <span class="requried-star">*</span>
+          </label>
+
+          <input class="row contact__input" name="name" autocomplete="name" id="contact__first-name" type="text"
+            required />
+
+          <span class="row contact__input-error" id="contact__first-name-error" hidden>
+            <!-- This field is required -->
+          </span>
+        </div>
+
+        <div class="contact__input-container">
+          <label class="row contact__input-label" for="contact__last-name">Last Name <span
+              class="requried-star">*</span></label>
+          <input class="row contact__input" name="family-name" autocomplete="family-name" id="contact__last-name"
+            type="text" required />
+          <span class="row contact__input-error" id="contact__last-name-error" hidden>
+            <!-- This field is required -->
+          </span>
+        </div>
+
+        <div class="row contact__input-container">
+          <label class="row contact__input-label" for="contact__email">Email Address <span
+              class="requried-star">*</span></label>
+          <input class="row contact__input" name="email" autocomplete="email" id="contact__email" type="email"
+            required />
+          <span class="row contact__input-error" id="contact__email-error" hidden>
+            <!-- Please enter a valid email address -->
+            <!-- This field is required -->
+          </span>
+        </div>
+
+        <div class="row contact__form-row ">
+          <fieldset class="contact__input-container">
+            <legend class="row contact__input-container-row contact__input-label">Query Type <span
+                class="requried-star">*</span></legend>
+
+            <label class="contact__input">
+              <input class="contact__checkable-input" name="query-type" type="radio" value="general" required />
+              <span>General Enquiry</span>
+            </label>
+
+            <label class="contact__input">
+              <input class="contact__checkable-input" name="query-type" type="radio" value="support" required />
+              <span>Support Request</span>
+            </label>
+
+          </fieldset>
+          <span class="row contact__input-error" id="contact__query-type-error" hidden>
+            <!-- Please select a query type -->
+          </span>
+        </div>
+
+        <div class="row contact__input-container">
+          <label class="row contact__input-label" for="contact__message">Message <span
+              class="requried-star">*</span></label>
+          <textarea class="row contact__input" rows="10" id="contact__message" name="message" required></textarea>
+          <span class="row contact__input-error" id="contact__message-error" hidden>
+            <!-- This field is required -->
+          </span>
+        </div>
+
+
+        <div class="row">
+          <label class="contact__checkbox" for="contact__consent">
+            <input class="contact__checkable-input" name="consent" id="contact__consent" type="checkbox"
+              value="accepted" required>
+            <span>I consent to being contacted by the team <span class="requried-star">*</span></span>
+          </label>
+          <span class="row contact__input-error" id="contact__consent-error" hidden>
+            <!-- To submit this form, please consent to being contacted -->
+          </span>
+        </div>
+
+        <button class="row contact__submit" type="submit">
+          Submit
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <div class="popup-message" role="status" aria-live="polite" hidden>
+    <div class="popup-message__container">
+      <h2></h2>
+      <p></p>
+    </div>
+  </div>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Mohammad</a>.
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+
+</html>

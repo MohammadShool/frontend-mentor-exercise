@@ -1,0 +1,272 @@
+@import url(./reset.css);
+
+@font-face {
+    font-family: Karla;
+    src: url(./assets/fonts/Karla-VariableFont_wght.ttf);
+}
+
+:root {
+    --green-200: #dff1e7;
+    --green-600: #0c7d69;
+    --red: #d73c3c;
+
+    --white: #ffffff;
+    --grey-500: #87a3a6;
+    --grey-900: #2b4246;
+}
+
+html {
+    font-family: Karla;
+    font-size: clamp(100%, 70% + 1vw, 110%);
+}
+
+body {
+    background-color: var(--green-200);
+}
+
+.container {
+    padding: 1em;
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact {
+    /* font-size: 1rem; */
+    width: 100%;
+    background-color: var(--white);
+    padding: 0 1em;
+    border-radius: 16px;
+    color: var(--grey-900);
+    max-width: 46rem;
+}
+
+.contact__title {
+    font-weight: 700;
+}
+
+.contact__form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact__form > * {
+    flex: 1;
+    padding: 0 .5em;
+}
+
+.contact__input-container {
+    display: flex;
+    align-content: baseline;
+    flex-wrap: wrap;
+}
+
+.contact__input-container > * {
+    flex: 1;
+    margin-right: .5em;
+    min-width: max-content;
+}
+
+.row {
+    min-width: 100%;
+}
+
+.contact__input-label {
+    font-weight: 400;
+    margin: 1em 0;
+}
+
+.requried-star {
+    color: var(--green-600);
+}
+
+.contact__input {
+    border: 1px solid var(--grey-500);
+    padding: 1em;
+    border-radius: .5em;
+    margin-bottom: .5em;
+}
+
+.contact__input:hover {
+    border-color: var(--green-600);
+}
+
+.contact__input:has(input):hover {
+    cursor: pointer;
+}
+
+.contact__input:focus {
+    background-color: var(--green-200);
+    border-color: var(--green-600);
+}
+
+.contact__input:has(input:checked) {
+    background-color: var(--green-200);
+    border-color: var(--green-600);
+}
+
+.contact__input--error {
+    border-color: var(--red);
+}
+
+.contact__input-error {
+    color: var(--red);
+    font-size: 1rem;
+    margin: .5em 0;
+}
+
+.contact__checkable-input {
+    width: 1.3em;
+    height: 1.3em;
+    background-color: var(--green-600);
+    accent-color: var(--green-600);
+    margin-right: 1em;
+} 
+
+.contact__checkbox {
+    display: flex;
+    font-size: 1rem;
+    margin: 2em 0 1em 0;
+}
+
+.contact__checkbox:hover {
+    cursor: pointer;
+    color: var(--green-600);
+}
+
+.contact__checkbox > input[type=checkbox]:focus {
+    outline: 2px solid black;
+}
+
+
+.contact__submit {
+    font-size: 1rem;
+    font-weight: 400;
+     background-color: var(--green-600);
+     color: var(--white);
+     width: 100%;
+     padding: 1em;
+     border-radius: .5em;
+     margin: 2em 0;
+}
+.contact__submit:hover, .contact__submit:focus{
+    background-color: var(--grey-900);
+    cursor: pointer;
+}
+
+
+.contact__submit:active {
+    background-color: #152528;
+}
+
+.popup-message{
+    position: fixed;
+    top: -100%;
+    opacity: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all .5s ease-in-out;
+}
+
+.show-popup {
+    top: 0;
+    opacity: 1;
+}
+
+.popup-message__container {
+    background-color: var(--grey-900);
+    margin-top: 1em;
+    color: white;
+    border-radius: 10px;
+    padding: 1em;
+    box-shadow: 0px 0px 50px 0px var(--grey-900);
+}
+
+.popup-message__container h2 {
+    margin: .5em 0;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.popup-message__container h2::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/images/icon-success-check.svg);
+    background-size: contain;
+    margin-right: 1em;
+}
+
+.popup-message__container p {
+    color: var(--green-200);
+}
+
+/*--------------*/
+/*     footer   */
+/*--------------*/
+
+.attribution {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.attribution::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -10;
+    pointer-events: none;
+}
+
+.attribution a {
+    color: burlywood;
+    text-decoration: none;
+    /* transition: all .5s ease-in-out; */
+    margin: 0 2px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    padding-right: 1em;
+    transition: all .35s ease-in-out;
+}
+
+.attribution a::before {
+    content: "->";
+    position: absolute;
+    right: 100%;
+    left: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: burlywood;
+    z-index: -1;
+    bottom: 0;
+    top: 0;
+    transition: all .35s ease-in-out;
+}
+
+.attribution a:hover {
+    color: black;
+}
+.attribution a:hover::before {
+    right: 0;
+}
